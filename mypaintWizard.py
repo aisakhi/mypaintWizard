@@ -100,9 +100,31 @@ checkSet3.grid(row = 6, column = 1, columnspan = 2, sticky = tk.W)
 checkSet4.grid(row = 7, column = 1, columnspan = 2, sticky = tk.W)
 checkBrushSliders.grid(row = 8, column = 1, columnspan = 2, sticky = tk.W)
 
+#Decorate page 3
+
+labelColor = tk.Label(frameP3, font = fontNormal, wraplength = 640, justify = tk.LEFT, text = "Choose any of the following options that you want shown persistently on the side docks; Instructions for each will be provided at the conclusion of this wizard:")
+page3Vars = [tk.IntVar(), tk.IntVar(), tk.IntVar(), tk.IntVar(), tk.IntVar(), tk.IntVar(), tk.IntVar()]
+ChangeColor1 = tk.Checkbutton(frameP3, font = fontNormal, anchor = tk.W, variable = page2Vars[0], text = " Change from HSY wheel")
+ChangeColor2 = tk.Checkbutton(frameP3, font = fontNormal, anchor = tk.W, variable = page2Vars[1], text = "Change from palette")
+OptionSet1 = tk.Checkbutton(frameP3, font = fontNormal, anchor = tk.W, variable = page2Vars[2], text = "Set #1 (HSY wheel)")
+OptionSet2 = tk.Checkbutton(frameP3, font = fontNormal, anchor = tk.W, variable = page2Vars[3], text = "Set #2 (HSV wheel)")
+OptionSet3 = tk.Checkbutton(frameP3, font = fontNormal, anchor = tk.W, variable = page2Vars[4], text = "Set #3 (color palette)")
+OptionSet4 = tk.Checkbutton(frameP3, font = fontNormal, anchor = tk.W, variable = page2Vars[5], text = "Set #4 (HSV cube)")
+OptionSet5 = tk.Checkbutton(frameP3, font = fontNormal,anchor = tk.W,variable=page2Vars[6], text =" Set #5 (ADD COLOR to palette)")
+
+checkColorSliders = tk.Label(frameP3, text = " The 'Add color'  option helps to add the extra shade from a color wheel or cube to the palette:")
+
+labelColor.grid(row = 1, column = 1, columnspan = 2)
+OptionSet1.grid(row = 2, column = 1, columnspan = 2, sticky = tk.W)
+OptionSet2.grid(row = 3, column = 1, columnspan = 2, sticky = tk.W)
+OptionSet3.grid(row = 4, column = 1, columnspan = 2, sticky = tk.W)
+OptionSet4.grid(row = 5, column = 1, columnspan = 2, sticky = tk.W)
+OptionSet5.grid(row = 6, column = 1, columnspan = 2, sticky = tk.W)
+checkColorSliders.grid(row = 10, column = 1, columnspan = 2, sticky = tk.W)
+
+
 #Decorate page 4
 resultString = tk.StringVar()
-
 def updatePage4():
 	page2Strings = [ \
 		"Classic Brushes: Click the \"Brush\" menu, then \"Brush Groups >\", then \"Classic\". Drag it to anywhere on either dock if you wish.\n", \
